@@ -30,3 +30,12 @@ def list_view(request):
         "locations": locations
     }
     return render(request, template, context)
+
+
+def detail_view(request, id=None):
+    template = "detail-view.html"
+    location = get_object_or_404(Location, location_id=id)
+    context = {
+        "location": location
+    }
+    return render(request, template, context)
