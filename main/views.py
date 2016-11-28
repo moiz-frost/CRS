@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .forms import LocationForm, PersonForm
+from .models import Location
 
 
-def home(request):
+def home_view(request):
+    template = "home.html"
     location_form = LocationForm(request.POST or None)
     person_form = PersonForm(request.POST or None)
     context = {
@@ -18,4 +20,13 @@ def home(request):
                 b = person_form.save(commit=False)
                 b.location = a
                 b.save()
-    return render(request, "home.html", context)
+    return render(request, template, context)
+
+
+def list_view(request):
+    template = "list-view.html"
+    locations = Location.objects.all()
+    context = {
+        "locations": locations
+    }
+    return render(request, template, context)
