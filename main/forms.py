@@ -1,9 +1,7 @@
 from django import forms
+from django.core.validators import RegexValidator
+
 from .models import Location, User, Person, STATE_CHOICES, BIRTH_YEAR_CHOICES, GENDER_CHOICES
-
-
-class DateInput(forms.DateInput):
-    input_type = 'date'
 
 
 class LocationForm(forms.ModelForm):
@@ -53,7 +51,10 @@ class PersonForm(forms.ModelForm):
         }
 
         widgets = {
-            'date_of_birth': DateInput(),
+            # 'date_of_birth': forms.SelectDateWidget(
+            #     years=BIRTH_YEAR_CHOICES
+            # ),
+            ''
             'gender': forms.Select(
                 choices=GENDER_CHOICES
             )
