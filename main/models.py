@@ -54,8 +54,9 @@ BIRTH_YEAR_CHOICES = [
 
 class Location(models.Model):
     location_id = models.BigAutoField(primary_key=True)
-    address = models.TextField(max_length=200)
-    zip_code = models.IntegerField()
+    address = models.TextField(max_length=200, blank=True)
+    zip_code = models.CharField(max_length=5,
+                                validators=[RegexValidator(r'^\d{5}$', message="Invalid zip code")])
     state = models.CharField(max_length=20)
     city = models.CharField(max_length=20)
 

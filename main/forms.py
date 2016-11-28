@@ -34,12 +34,6 @@ class LocationForm(forms.ModelForm):
         super(LocationForm, self).__init__(*args, **kwargs)
         self.fields["address"].initial = ""
 
-    def clean_zip_code(self, *args, **kwargs):
-        zip_integer = self.cleaned_data.get("zip_code")
-        if zip_integer < 0:
-            raise forms.ValidationError("Invalid Zip Code")
-        return zip_integer
-
 
 class PersonForm(forms.ModelForm):
     class Meta:
