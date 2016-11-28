@@ -69,7 +69,8 @@ class Person(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     date_of_birth = models.DateField()
-    phone = models.BigIntegerField()
+    phone = models.CharField(max_length=17,
+                             validators=[RegexValidator(r'^\d{11}$', message="Invalid Phone Number")])
     profession = models.CharField(max_length=100, choices=PROFESSION_CHOICES)
     gender = models.CharField(max_length=10)
     location = models.OneToOneField(Location, null=False, default=None, blank=True)
