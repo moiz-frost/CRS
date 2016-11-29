@@ -1,9 +1,10 @@
-from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
+from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
 from .forms import LocationForm, PersonForm
 from .models import Location
 
 
-def home_view(request):
+def create_view(request):
     template = "home.html"
     location_form = LocationForm(request.POST or None)
     person_form = PersonForm(request.POST or None)
@@ -20,6 +21,9 @@ def home_view(request):
                 b = person_form.save(commit=False)
                 b.location = a
                 b.save()
+                messages.success(request, "Thanks!")
+                return HttpResponseRedirect(
+                    "http://127.0.0.1:8000/main/detail/{locid}".format(locid=a.location_id))
     return render(request, template, context)
 
 
