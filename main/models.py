@@ -70,9 +70,9 @@ class Person(models.Model):
     last_name = models.CharField(max_length=100)
     date_of_birth = models.DateField()
     phone = models.CharField(max_length=17,
-                             validators=[RegexValidator(r'^\d{11}$', message="Invalid Phone Number")])
+                             validators=[RegexValidator(r'^\d{11,14}$', message="Invalid Phone Number")])
     profession = models.CharField(max_length=100, choices=PROFESSION_CHOICES)
-    gender = models.CharField(max_length=10)
+    gender = models.CharField(max_length=20)
     location = models.OneToOneField(Location, null=False, default=None, blank=True)
 
     def __str__(self):
