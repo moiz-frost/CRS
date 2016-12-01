@@ -1,6 +1,6 @@
 import re
 from django import forms
-from .models import Location, Crime, CrimeCategory, Person, Victim, Suspect, STATE_CHOICES, GENDER_CHOICES, \
+from .models import Location, Crime, CrimeCategory, Person, Victim, Suspect, CrimesCommitted, STATE_CHOICES, GENDER_CHOICES, \
     CRIME_CATEGORIES_CHOICES, THREAT_LEVELS_CHOICES, PENALTIES_CHOICES, CAST_CHOICES, COMPLEXION_CHOICES, \
     PROFESSION_CHOICES, PHYSIQUE_CHOICES
 
@@ -77,6 +77,12 @@ class VictimForm(forms.ModelForm):
         if not re.search('[a-zA-Z]', name):
             raise forms.ValidationError("Invalid Name")
         return name
+
+
+class CrimesCommittedForm(forms.ModelForm):
+    class Meta:
+        model = CrimesCommitted
+        fields = ['id']
 
 
 class SuspectForm(forms.ModelForm):

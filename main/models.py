@@ -2,64 +2,66 @@ from datetime import datetime
 from django.core.validators import RegexValidator
 from django.db import models
 
-PROFESSION_CHOICES = (
-
-)
+PROFESSION_CHOICES = [
+    ('Terrorist', 'Terrorist')
+]
 
 GENDER_CHOICES = [
-    ('Male'       , 'Male'),
-    ('Female'     , 'Female'),
+    ('Male', 'Male'),
+    ('Female', 'Female'),
     ('Unspecified', 'Cannot Specify')
 ]
 
 CAST_CHOICES = [
-    ('Punjabi'    ,   'Punjabi'),
-    ('Pashtun'    ,   'Pashtun'),
-    ('Sindhi'     ,   'Sindhi'),
-    ('Seraiki'    ,   'Seraiki'),
-    ('Muhajir'    ,   'Muhajir'),
-    ('Baloch'     ,   'Baloch'),
-    ('Unspecified',   'Others'),
+    ('Punjabi', 'Punjabi'),
+    ('Pashtun', 'Pashtun'),
+    ('Sindhi', 'Sindhi'),
+    ('Seraiki', 'Seraiki'),
+    ('Muhajir', 'Muhajir'),
+    ('Baloch', 'Baloch'),
+    ('Unspecified', 'Others'),
 ]
 
 COMPLEXION_CHOICES = [
-    ('Fair'         ,   'Fair'),
-    ('Wheatish'     ,   'Wheatish'),
-    ('Dark'         ,   'Dark'),
+    ('Fair', 'Fair'),
+    ('Wheatish', 'Wheatish'),
+    ('Dark', 'Dark'),
 ]
 
 STATE_CHOICES = (
-    ('Sindh'                , 'Sindh'),
-    ('Punjab'               , 'Punjab'),
-    ('Gilgit'               , 'Gilgit'),
-    ('Baltistan'            , 'Baltistan'),
-    ('Jammu and Kashmir'    , 'Jammu and Kashmir'),
-    ('FATA'                 , 'FATA')
+    ('Sindh', 'Sindh'),
+    ('Punjab', 'Punjab'),
+    ('Gilgit', 'Gilgit'),
+    ('Baltistan', 'Baltistan'),
+    ('Jammu and Kashmir', 'Jammu and Kashmir'),
+    ('FATA', 'FATA')
 )
 
 CITY_CHOICES = (
-    ('Karachi'      , 'Karachi'),
-    ('Islamabad'    , 'Islamabad')
-)
-
-PHYSIQUE_CHOICES = (
-    ('Assault'              ,'Assault'),
-    ('False Imprisonment'   , 'False Imprisonment'),
-    ('Kidnapping'           , 'Kidnapping'),
-    ('Homicide'             , 'Homicide'),
-    ('Murder'               , 'Murder'),
-    ('Vehicular Homicide'   , 'Vehicular Homicide'),
-    ('Rape'                 , 'Rape')
+    ('Karachi', 'Karachi'),
+    ('Islamabad', 'Islamabad')
 )
 
 CRIME_CATEGORIES_CHOICES = (
-
+    ('Assault', 'Assault'),
+    ('False Imprisonment', 'False Imprisonment'),
+    ('Kidnapping', 'Kidnapping'),
+    ('Homicide', 'Homicide'),
+    ('Murder', 'Murder'),
+    ('Vehicular Homicide', 'Vehicular Homicide'),
+    ('Rape', 'Rape')
 )
 
+PHYSIQUE_CHOICES = [
+    ('Ectomorph', 'Ectomorph'),
+    ('Mesomorph', 'Mesomorph'),
+    ('Endomorph', 'Endomorph')
+]
+
 THREAT_LEVELS_CHOICES = [
-    ('High'     , 'High'),
-    ('Medium'   , 'Medium'),
-    ('Low'      , 'Low')
+    ('High', 'High'),
+    ('Medium', 'Medium'),
+    ('Low', 'Low')
 ]
 
 PENALTIES_CHOICES = [
@@ -87,9 +89,9 @@ class Person(models.Model):
     date_of_birth = models.DateField()
     phone = models.CharField(max_length=17,
                              validators=[RegexValidator(r'^\d{11,14}$', message="Invalid Phone Number")])
-    profession = models.CharField(max_length=100, choices=PROFESSION_CHOICES)
+    profession = models.CharField(max_length=50)
     gender = models.CharField(max_length=20)
-    location = models.OneToOneField(Location, null=False, default=None, blank=True)
+    location = models.OneToOneField(Location, null=False, blank=False)
 
     def __str__(self):
         return str(self.nic)
@@ -102,29 +104,34 @@ class User(models.Model):
     created = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):
-        return self.user_name
+        return str(self.user_name)
 
 
 class Victim(models.Model):
     victim_id = models.BigAutoField(primary_key=True)
     name = models.CharField(max_length=250, blank=True)
     cast = models.CharField(max_length=50)
-    age = models.IntegerField(blank=True,
-                              validators=[RegexValidator(r'^\d{1,3}$', message="Invalid Age")])
+    age = models.CharField(max_length=5, blank=True,
+                           validators=[RegexValidator(r'^\d{1,3}$', message="Invalid Age")])
     gender = models.CharField(max_length=30)
     complexion = models.CharField(max_length=30)
     profession = models.CharField(max_length=30)
 
+    def __str__(self):
+        return str(self.victim_id)
+
 
 class Suspect(models.Model):
     suspect_id = models.BigAutoField(primary_key=True)
-    physique = models.CharField(max_length=50, choices=PHYSIQUE_CHOICES)
-    complexion = models.CharField(max_length=10, choices=COMPLEXION_CHOICES)
-    cast = models.CharField(max_length=50, choices=CAST_CHOICES)
-    age = models.IntegerField(blank=True,
-                              validators=[RegexValidator(r'^\d{1,3}$', message="Invalid Age")])
-    gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
+    physique = models.CharField(max_length=50)
+    complexion = models.CharField(max_length=20)
+    cast = models.CharField(max_length=50)
+    age = models.CharField(max_length=5, blank=True,
+                           validators=[RegexValidator(r'^\d{1,3}$', message="Invalid Age")])
+    gender = models.CharField(max_length=10)
 
+    def __str__(self):
+        return str(self.suspect_id)
 
 class CrimeCategory(models.Model):
     category_id = models.BigAutoField(primary_key=True)
@@ -132,16 +139,25 @@ class CrimeCategory(models.Model):
     threat_level = models.CharField(max_length=25)
     penalty = models.CharField(max_length=25)
 
+    def __str__(self):
+        return str(self.category_id)
+
 
 class Crime(models.Model):
     crime_id = models.BigAutoField(primary_key=True)
     details = models.TextField(max_length=1500)
-    category = models.ForeignKey(CrimeCategory)
+    category = models.ForeignKey(CrimeCategory, null=False, blank=False)
+
+    def __str__(self):
+        return str(self.crime_id)
 
 
 class CrimesCommitted(models.Model):
     id = models.BigAutoField(primary_key=True)
-    user = models.ForeignKey(User, blank=True)
-    victim = models.ForeignKey(Victim, blank=True)
-    crime = models.ForeignKey(Crime, blank=True)
-    suspect = models.ForeignKey(Suspect, blank=True)
+    #user = models.ForeignKey(User, blank=False, null=False) # Restore this later when you work in authentication
+    victim = models.ForeignKey(Victim, blank=False, null=False)
+    crime = models.ForeignKey(Crime, blank=False, null=False)
+    suspect = models.ForeignKey(Suspect, blank=False, null=False)
+
+    def __str__(self):
+        return str(self.id)
