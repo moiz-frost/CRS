@@ -7,30 +7,49 @@ PROFESSION_CHOICES = (
 )
 
 GENDER_CHOICES = [
-    ('Male', 'Male'),
-    ('Female', 'Female'),
+    ('Male'       , 'Male'),
+    ('Female'     , 'Female'),
     ('Unspecified', 'Cannot Specify')
 ]
 
-CAST_CHOICES = (
+CAST_CHOICES = [
+    ('Punjabi'    ,   'Punjabi'),
+    ('Pashtun'    ,   'Pashtun'),
+    ('Sindhi'     ,   'Sindhi'),
+    ('Seraiki'    ,   'Seraiki'),
+    ('Muhajir'    ,   'Muhajir'),
+    ('Baloch'     ,   'Baloch'),
+    ('Unspecified',   'Others'),
+]
 
-)
-
-COMPLEXION_CHOICES = (
-
-)
+COMPLEXION_CHOICES = [
+    ('Fair'         ,   'Fair'),
+    ('Wheatish'     ,   'Wheatish'),
+    ('Dark'         ,   'Dark'),
+]
 
 STATE_CHOICES = (
-    ('Sindh', 'Sindh'),
-    ('Punjab', 'Punjab')
+    ('Sindh'                , 'Sindh'),
+    ('Punjab'               , 'Punjab'),
+    ('Gilgit'               , 'Gilgit'),
+    ('Baltistan'            , 'Baltistan'),
+    ('Jammu and Kashmir'    , 'Jammu and Kashmir'),
+    ('FATA'                 , 'FATA')
 )
 
 CITY_CHOICES = (
-
+    ('Karachi'      , 'Karachi'),
+    ('Islamabad'    , 'Islamabad')
 )
 
 PHYSIQUE_CHOICES = (
-
+    ('Assault','Assault'),
+    ('False Imprisonment', 'False Imprisonment'),
+    ('Kidnapping', 'Kidnapping'),
+    ('Homicide', 'Homicide'),
+    ('Murder', 'Murder'),
+    ('Vehicular Homicide', 'Vehicular Homicide'),
+    ('Rape', 'Rape')
 )
 
 CRIME_CATEGORIES_CHOICES = (
@@ -39,17 +58,13 @@ CRIME_CATEGORIES_CHOICES = (
 
 THREAT_LEVELS_CHOICES = [
     ('High', 'High')
+    ('Medium', 'Medium')
+    ('Low', 'Low')
 ]
 
 PENALTIES_CHOICES = [
     ('Death', 'Death')
 ]
-
-BIRTH_YEAR_CHOICES = [
-    ('1980',
-     '1999')
-]
-
 
 class Location(models.Model):
     location_id = models.BigAutoField(primary_key=True)
