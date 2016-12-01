@@ -123,7 +123,7 @@ class Crime(models.Model):
 
 class CrimesCommitted(models.Model):
     id = models.AutoField(primary_key=True)
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, blank=True)
     victim = models.ForeignKey(Victim)
     crime = models.ForeignKey(Crime)
     suspect = models.ForeignKey(Suspect)
