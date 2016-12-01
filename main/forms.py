@@ -1,5 +1,5 @@
 from django import forms
-from .models import Location, User, Person, STATE_CHOICES, BIRTH_YEAR_CHOICES, GENDER_CHOICES
+from .models import Location, User, Person, STATE_CHOICES, GENDER_CHOICES
 
 
 class DateInput(forms.DateInput):

@@ -43,13 +43,13 @@ CITY_CHOICES = (
 )
 
 PHYSIQUE_CHOICES = (
-    ('Assault','Assault'),
-    ('False Imprisonment', 'False Imprisonment'),
-    ('Kidnapping', 'Kidnapping'),
-    ('Homicide', 'Homicide'),
-    ('Murder', 'Murder'),
-    ('Vehicular Homicide', 'Vehicular Homicide'),
-    ('Rape', 'Rape')
+    ('Assault'              ,'Assault'),
+    ('False Imprisonment'   , 'False Imprisonment'),
+    ('Kidnapping'           , 'Kidnapping'),
+    ('Homicide'             , 'Homicide'),
+    ('Murder'               , 'Murder'),
+    ('Vehicular Homicide'   , 'Vehicular Homicide'),
+    ('Rape'                 , 'Rape')
 )
 
 CRIME_CATEGORIES_CHOICES = (
@@ -57,9 +57,9 @@ CRIME_CATEGORIES_CHOICES = (
 )
 
 THREAT_LEVELS_CHOICES = [
-    ('High', 'High')
-    ('Medium', 'Medium')
-    ('Low', 'Low')
+    ('High'     , 'High'),
+    ('Medium'   , 'Medium'),
+    ('Low'      , 'Low')
 ]
 
 PENALTIES_CHOICES = [
