@@ -66,6 +66,7 @@ PENALTIES_CHOICES = [
     ('Death', 'Death')
 ]
 
+
 class Location(models.Model):
     location_id = models.BigAutoField(primary_key=True)
     address = models.TextField(max_length=200, blank=True)
@@ -105,40 +106,42 @@ class User(models.Model):
 
 
 class Victim(models.Model):
-    victim_id = models.AutoField(primary_key=True)
+    victim_id = models.BigAutoField(primary_key=True)
     name = models.CharField(max_length=250, blank=True)
-    cast = models.CharField(max_length=50, choices=CAST_CHOICES)
-    age = models.IntegerField(blank=True)
-    gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
-    complexion = models.CharField(max_length=10, choices=COMPLEXION_CHOICES)
-    profession = models.CharField(max_length=100, choices=PROFESSION_CHOICES)
+    cast = models.CharField(max_length=50)
+    age = models.IntegerField(blank=True,
+                              validators=[RegexValidator(r'^\d{1,3}$', message="Invalid Age")])
+    gender = models.CharField(max_length=30)
+    complexion = models.CharField(max_length=30)
+    profession = models.CharField(max_length=30)
 
 
 class Suspect(models.Model):
-    suspect_id = models.AutoField(primary_key=True)
+    suspect_id = models.BigAutoField(primary_key=True)
     physique = models.CharField(max_length=50, choices=PHYSIQUE_CHOICES)
     complexion = models.CharField(max_length=10, choices=COMPLEXION_CHOICES)
     cast = models.CharField(max_length=50, choices=CAST_CHOICES)
-    age = models.IntegerField(blank=True)
+    age = models.IntegerField(blank=True,
+                              validators=[RegexValidator(r'^\d{1,3}$', message="Invalid Age")])
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
 
 
 class CrimeCategory(models.Model):
-    category_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=50, choices=CRIME_CATEGORIES_CHOICES)
-    threat_level = models.CharField(max_length=50, choices=THREAT_LEVELS_CHOICES, default='High')
-    penalty = models.CharField(max_length=50, choices=PENALTIES_CHOICES, default='Death')
+    category_id = models.BigAutoField(primary_key=True)
+    name = models.CharField(max_length=25)
+    threat_level = models.CharField(max_length=25)
+    penalty = models.CharField(max_length=25)
 
 
 class Crime(models.Model):
-    crime_id = models.IntegerField(primary_key=True)
-    details = models.TextField(max_length=500)
+    crime_id = models.BigAutoField(primary_key=True)
+    details = models.TextField(max_length=1500)
     category = models.ForeignKey(CrimeCategory)
 
 
 class CrimesCommitted(models.Model):
-    id = models.AutoField(primary_key=True)
+    id = models.BigAutoField(primary_key=True)
     user = models.ForeignKey(User, blank=True)
-    victim = models.ForeignKey(Victim)
-    crime = models.ForeignKey(Crime)
-    suspect = models.ForeignKey(Suspect)
+    victim = models.ForeignKey(Victim, blank=True)
+    crime = models.ForeignKey(Crime, blank=True)
+    suspect = models.ForeignKey(Suspect, blank=True)

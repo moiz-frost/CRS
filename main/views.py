@@ -4,7 +4,7 @@ from .forms import LocationForm, PersonForm
 from .models import Location
 
 
-def create_view(request):
+def create_view_location_person(request):
     template = "home.html"
     location_form = LocationForm(request.POST or None)
     person_form = PersonForm(request.POST or None)
@@ -27,7 +27,7 @@ def create_view(request):
     return render(request, template, context)
 
 
-def list_view(request):
+def list_view_location_person(request):
     template = "list-view.html"
     locations = Location.objects.all()
     context = {
@@ -36,7 +36,7 @@ def list_view(request):
     return render(request, template, context)
 
 
-def detail_view(request, id=None):
+def detail_view_location_person(request, id=None):
     template = "detail-view.html"
     location = get_object_or_404(Location, location_id=id)
     context = {
