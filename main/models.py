@@ -133,6 +133,7 @@ class Suspect(models.Model):
     def __str__(self):
         return str(self.suspect_id)
 
+
 class CrimeCategory(models.Model):
     category_id = models.BigAutoField(primary_key=True)
     name = models.CharField(max_length=25)
@@ -154,7 +155,7 @@ class Crime(models.Model):
 
 class CrimesCommitted(models.Model):
     id = models.BigAutoField(primary_key=True)
-    #user = models.ForeignKey(User, blank=False, null=False) # Restore this later when you work in authentication
+    #user = models.ForeignKey(User, blank=False, null=False) # Restore this later when you work on authentication
     victim = models.ForeignKey(Victim, blank=False, null=False)
     crime = models.ForeignKey(Crime, blank=False, null=False)
     suspect = models.ForeignKey(Suspect, blank=False, null=False)

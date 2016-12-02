@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Locations</title>
+    <title>Individual Crimes</title>
     <style>
         body {background-color: powderblue;}
         tr   {text-align: center;}
@@ -21,22 +21,18 @@
 </head>
 <body>
 <table style="width:100%">
-    <caption>Locations</caption>
+    <caption>Individual Crime Details</caption>
     <tr>
     <th>ID</th>
-    <th>Address</th>
-    <th>Zip Code</th>
-    <th>State</th>
-    <th>City</th>
+    <th>Details</th>
+    <th>Category</th>
     </tr>
 
-{% for loc in locations %}
+{% for crime in crimes %}
     <tr>
-    <td><a href='http://127.0.0.1:8000/main/detail/{{ loc.location_id }}'>{{ loc.location_id }}</a></td>
-    <td>{{ loc.address }}</td>
-    <td>{{ loc.zip_code }}</td>
-    <td>{{ loc.state }}</td>
-    <td>{{ loc.city }}</td>
+    <td>{{ crime.crime_id }}</td>
+    <td>{{ crime.details }}</td>
+    <td>{{ crime.category }}</td>
     </tr>
 {% endfor %}
 

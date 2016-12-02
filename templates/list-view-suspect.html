@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Locations</title>
+    <title>Suspect Details</title>
     <style>
         body {background-color: powderblue;}
         tr   {text-align: center;}
@@ -21,22 +21,24 @@
 </head>
 <body>
 <table style="width:100%">
-    <caption>Locations</caption>
+    <caption>Suspects</caption>
     <tr>
     <th>ID</th>
-    <th>Address</th>
-    <th>Zip Code</th>
-    <th>State</th>
-    <th>City</th>
+    <th>Physique</th>
+    <th>Complexion</th>
+    <th>Cast</th>
+    <th>Age</th>
+    <th>Gender</th>
     </tr>
 
-{% for loc in locations %}
+{% for suspect in suspects %}
     <tr>
-    <td><a href='http://127.0.0.1:8000/main/detail/{{ loc.location_id }}'>{{ loc.location_id }}</a></td>
-    <td>{{ loc.address }}</td>
-    <td>{{ loc.zip_code }}</td>
-    <td>{{ loc.state }}</td>
-    <td>{{ loc.city }}</td>
+    <td>{{ suspect.suspect_id }}</td>
+    <td>{{ suspect.physique }}</td>
+    <td>{{ suspect.complexion }}</td>
+    <td>{{ suspect.cast }}</td>
+    <td>{{ suspect.age }}</td>
+    <td>{{ suspect.gender }}</td>
     </tr>
 {% endfor %}
 

@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
 from .forms import LocationForm, PersonForm, CrimeCategoryForm, CrimeForm, VictimForm, SuspectForm, CrimesCommittedForm
-from .models import Location
+from .models import Location, CrimesCommitted, Victim, Suspect, CrimeCategory, Crime
 
 
 def create_view_location_person(request):
@@ -44,8 +44,8 @@ def detail_view_location_person(request, id=None):
     return render(request, template, context)
 
 
-def create_view_crime(request):
-    template = "create-view-crime.html"
+def create_view_crime_committed(request):
+    template = "create-view-crime-committed.html"
     crime_form = CrimeForm(request.POST or None)
     crime_category_form = CrimeCategoryForm(request.POST or None)
     victim_form = VictimForm(request.POST or None)
@@ -77,3 +77,49 @@ def create_view_crime(request):
             crimes_committed.crime = crime
             crimes_committed.save()
     return render(request, template, context)
+
+
+def list_view_crime_committed(request):
+    template = "list-view-crime-committed.html"
+    crimes = CrimesCommitted.objects.all()
+    context = {
+        "crimes": crimes
+    }
+    return render(request, template, context)
+
+
+def list_view_victim(request):
+    template = "list-view-victim.html"
+    victims = Victim.objects.all()
+    context = {
+        "victims": victims
+    }
+    return render(request, template, context)
+
+
+def list_view_suspect(request):
+    template = "list-view-suspect.html"
+    suspects = Suspect.objects.all()
+    context = {
+        "suspects": suspects
+    }
+    return render(request, template, context)
+
+
+def list_view_crime_category(request):
+    template = "list-view-crime-category.html"
+    crime_categories = CrimeCategory.objects.all()
+    context = {
+        "crime_categories": crime_categories
+    }
+    return render(request, template, context)
+
+
+def list_view_crime(request):
+    template = "list-view-crime.html"
+    crimes = Crime.objects.all()
+    context = {
+        "crimes": crimes
+    }
+    return render(request, template, context)
+

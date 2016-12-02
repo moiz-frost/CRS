@@ -1,64 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/main/urls.py" line="6" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/main/urls.py" line="13" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f07b265f-71d4-4d51-8c78-234a8ee2fe5e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/create-view-crime.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0002_victim.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0003_delete_victim.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0004_victim.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0005_location.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0006_auto_20161121_2141.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0007_suspect.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0008_crimecategory.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0009_user.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0010_crime.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0011_crimescommitted.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0012_person_location.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0013_auto_20161122_0217.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0014_auto_20161122_0223.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0015_auto_20161122_0224.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0016_auto_20161122_0228.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0017_auto_20161122_0240.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0018_auto_20161122_0243.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0019_auto_20161122_0244.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0020_auto_20161122_0245.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0021_auto_20161122_0246.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0022_remove_user_person.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0023_user_person.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0024_auto_20161123_0052.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0025_auto_20161123_0052.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0026_user_created.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0027_auto_20161127_0250.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0028_auto_20161127_0250.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0029_auto_20161127_0253.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0030_auto_20161127_0253.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0031_auto_20161127_0327.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0032_auto_20161127_0328.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0033_auto_20161127_0338.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0034_auto_20161127_2042.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0035_auto_20161127_2207.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0036_auto_20161127_2208.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0037_auto_20161127_2228.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0038_auto_20161128_1032.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0039_auto_20161128_1037.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0040_auto_20161129_1556.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0041_auto_20161201_2111.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0042_auto_20161201_2132.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/0043_auto_20161201_2234.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main/migrations/__init__.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/msi_pc.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/msi_pc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/list-view-crime-category.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/list-view-crime-committed.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/list-view-crime.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/list-view-suspect.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/list-view-victim.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/forms.py" afterPath="$PROJECT_DIR$/main/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/models.py" afterPath="$PROJECT_DIR$/main/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/urls.py" afterPath="$PROJECT_DIR$/main/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/views.py" afterPath="$PROJECT_DIR$/main/views.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/detail-view.html" afterPath="$PROJECT_DIR$/templates/detail-view-location-person.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/create-view-location-person.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/list-view.html" afterPath="$PROJECT_DIR$/templates/list-view-location-person.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/list-view-location-person.html" afterPath="$PROJECT_DIR$/templates/list-view-location-person.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/create-view-crime.html" afterPath="$PROJECT_DIR$/templates/create-view-crime-committed.html" />
     </list>
     <ignored path="CRS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,12 +38,42 @@
     <favorites_list name="CRS" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+    <leaf>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="121" column="15" selection-start-line="121" selection-start-column="15" selection-end-line="121" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#366#1180#0" expanded="false" />
+                <element signature="e#1227#1408#0" expanded="false" />
+                <element signature="e#1466#1667#0" expanded="false" />
+                <element signature="e#1716#3126#0" expanded="false" />
+                <element signature="e#3173#3352#0" expanded="false" />
+                <element signature="e#3390#3554#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="156" column="113" selection-start-line="156" selection-start-column="113" selection-end-line="156" selection-end-column="113" />
+            <state relative-caret-position="223">
+              <caret line="139" column="16" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="16" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -94,57 +81,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/views.py">
+      <file leaf-file-name="list-view-crime.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/list-view-crime.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+            <state relative-caret-position="440">
+              <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <element signature="e#310#1124#0" expanded="false" />
-                <element signature="e#1171#1352#0" expanded="false" />
-                <element signature="e#1410#1611#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create-view-crime.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/create-view-crime.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#351#370#0" expanded="false" />
-                <element signature="e#411#784#0" expanded="false" />
-                <element signature="e#833#1339#0" expanded="false" />
-                <element signature="e#1381#2225#0" expanded="false" />
-                <element signature="e#2386#2991#0" expanded="false" />
-                <element signature="e#3035#3805#0" expanded="false" />
-                <element signature="e#3847#4538#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,11 +115,17 @@
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/detail-view.html" />
         <option value="$PROJECT_DIR$/templates/list-view.html" />
-        <option value="$PROJECT_DIR$/main/urls.py" />
         <option value="$PROJECT_DIR$/templates/create-view-crime.html" />
         <option value="$PROJECT_DIR$/main/forms.py" />
-        <option value="$PROJECT_DIR$/main/views.py" />
+        <option value="$PROJECT_DIR$/templates/js/list-view-crime.html" />
+        <option value="$PROJECT_DIR$/templates/list-view-location-person.html" />
         <option value="$PROJECT_DIR$/main/models.py" />
+        <option value="$PROJECT_DIR$/templates/list-view-victim.html" />
+        <option value="$PROJECT_DIR$/templates/list-view-suspect.html" />
+        <option value="$PROJECT_DIR$/templates/list-view-crime-category.html" />
+        <option value="$PROJECT_DIR$/main/urls.py" />
+        <option value="$PROJECT_DIR$/main/views.py" />
+        <option value="$PROJECT_DIR$/templates/list-view-crime.html" />
       </list>
     </option>
   </component>
@@ -217,6 +166,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -246,13 +196,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CRS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CRS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,6 +225,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Python\Github\CRS\templates" />
+    </key>
   </component>
   <component name="RunManager" selected="Django server.CRS">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -549,15 +517,16 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15405117" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15565032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4978678" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.48933902" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4978678" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27597404" sideWeight="0.46375266" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27597404" sideWeight="0.46162048" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27597404" sideWeight="0.5362473" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27597404" sideWeight="0.510661" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -565,7 +534,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4936034" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -600,60 +568,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CRS/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/create-view-location-person.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#310#1124#0" expanded="false" />
-            <element signature="e#1171#1352#0" expanded="false" />
-            <element signature="e#1410#1611#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -662,7 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -679,9 +603,9 @@
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#310#1124#0" expanded="false" />
-            <element signature="e#1171#1352#0" expanded="false" />
-            <element signature="e#1410#1611#0" expanded="false" />
+            <element signature="e#366#1180#0" expanded="false" />
+            <element signature="e#1227#1408#0" expanded="false" />
+            <element signature="e#1466#1667#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -698,7 +622,7 @@
         <state relative-caret-position="99">
           <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -707,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -724,9 +647,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#310#1124#0" expanded="false" />
-            <element signature="e#1171#1352#0" expanded="false" />
-            <element signature="e#1410#1611#0" expanded="false" />
+            <element signature="e#366#1180#0" expanded="false" />
+            <element signature="e#1227#1408#0" expanded="false" />
+            <element signature="e#1466#1667#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -736,7 +659,7 @@
         <state relative-caret-position="99">
           <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -753,7 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -923,26 +845,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/detail-view-location-person.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/list-view-location-person.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/create-view-location-person.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -953,20 +859,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/create-view-crime.html">
+    <entry file="file://$PROJECT_DIR$/templates/list-view-location-person.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        <state relative-caret-position="154">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -976,7 +874,7 @@
         <state relative-caret-position="352">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="false" />
             <element signature="e#351#370#0" expanded="false" />
             <element signature="e#411#784#0" expanded="false" />
             <element signature="e#833#1339#0" expanded="false" />
@@ -988,25 +886,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/list-view-suspect.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="21" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/list-view-crime-category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/list-view-crime-committed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/create-view-crime-committed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detail-view-location-person.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/list-view-victim.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+        <state relative-caret-position="484">
+          <caret line="121" column="15" selection-start-line="121" selection-start-column="15" selection-end-line="121" selection-end-column="15" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#310#1124#0" expanded="false" />
-            <element signature="e#1171#1352#0" expanded="false" />
-            <element signature="e#1410#1611#0" expanded="false" />
+            <element signature="e#366#1180#0" expanded="false" />
+            <element signature="e#1227#1408#0" expanded="false" />
+            <element signature="e#1466#1667#0" expanded="false" />
+            <element signature="e#1716#3126#0" expanded="false" />
+            <element signature="e#3173#3352#0" expanded="false" />
+            <element signature="e#3390#3554#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="156" column="113" selection-start-line="156" selection-start-column="113" selection-end-line="156" selection-end-column="113" />
+        <state relative-caret-position="223">
+          <caret line="139" column="16" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="16" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/list-view-crime.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
