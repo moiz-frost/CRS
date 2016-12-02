@@ -3,24 +3,6 @@ from .forms import LocationForm, CrimeCategoryForm, CrimeForm, VictimForm, Suspe
 from .models import Location, CrimesCommitted, Victim, Suspect, CrimeCategory, Crime
 
 
-def list_view_location(request):
-    template = "list-view-location.html"
-    locations = Location.objects.all()
-    context = {
-        "locations": locations
-    }
-    return render(request, template, context)
-
-
-def detail_view_location(request, id=None):
-    template = "detail-view-location.html"
-    location = get_object_or_404(Location, location_id=id)
-    context = {
-        "location": location
-    }
-    return render(request, template, context)
-
-
 def create_view_crime_committed(request):
     template = "create-view-crime-committed.html"
     crime_form = CrimeForm(request.POST or None)
@@ -38,25 +20,34 @@ def create_view_crime_committed(request):
         "location_form": location_form
     }
     if request.method == "POST":
-        location_valid = location_form.is_valid()
         category_valid = crime_category_form.is_valid()
         crime_valid = crime_form.is_valid()
         victim_valid = victim_form.is_valid()
         suspect_valid = suspect_form.is_valid()
+        location_valid = location_form.is_valid()
         if category_valid and crime_valid and victim_valid and suspect_valid and location_valid:
             location = location_form.save()
+            victim = victim_form.save()
             category = crime_category_form.save()
             crime = crime_form.save(commit=False)
             crime.category = category
             crime.save()
-            victim = victim_form.save()
             suspect = suspect_form.save()
             crimes_committed = crimes_committed_form.save(commit=False)
-            crimes_committed.victim = victim
-            crimes_committed.suspect = suspect
-            crimes_committed.crime = crime
             crimes_committed.location = location
+            crimes_committed.victim = victim
+            crimes_committed.crime = crime
+            crimes_committed.suspect = suspect
             crimes_committed.save()
+    return render(request, template, context)
+
+
+def list_view_location(request):
+    template = "list-view-location.html"
+    locations = Location.objects.all()
+    context = {
+        "locations": locations
+    }
     return render(request, template, context)
 
 
@@ -101,5 +92,50 @@ def list_view_crime(request):
     crimes = Crime.objects.all()
     context = {
         "crimes": crimes
+    }
+    return render(request, template, context)
+
+
+def detail_view_location(request, id=None):
+    template = "detail-view-location.html"
+    location = get_object_or_404(Location, location_id=id)
+    context = {
+        "location": location
+    }
+    return render(request, template, context)
+
+
+def detail_view_victim(request, id=None):
+    template = "detail-view-victim.html"
+    victim = get_object_or_404(Victim, victim_id=id)
+    context = {
+        "victim": victim
+    }
+    return render(request, template, context)
+
+
+def detail_view_suspect(request, id=None):
+    template = "detail-view-suspect.html"
+    suspect = get_object_or_404(Suspect, suspect_id=id)
+    context = {
+        "suspect": suspect
+    }
+    return render(request, template, context)
+
+
+def detail_view_crime(request, id=None):
+    template = "detail-view-crime.html"
+    crime = get_object_or_404(Crime, crime_id=id)
+    context = {
+        "crime": crime
+    }
+    return render(request, template, context)
+
+
+def detail_view_crime_category(request, id=None):
+    template = "detail-view-crime-category.html"
+    category = get_object_or_404(CrimeCategory, category_id=id)
+    context = {
+        "category": category
     }
     return render(request, template, context)

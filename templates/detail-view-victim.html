@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Location ID {{ location.location_id}}</title>
+    <title>Victim ID {{ victim.victim_id}}</title>
     <style>
         body {background-color: powderblue;}
         tr   {text-align: center;}
@@ -21,16 +21,22 @@
 </head>
 <body>
 <table style="width:100%">
-    <caption>Location ID "{{ location.location_id}}" Details</caption>
+    <caption>Victim ID "{{ victim.victim_id}}" Details</caption>
     <tr>
-    <th>Address</th>
-    <th>State</th>
-    <th>City</th>
+    <th>Name</th>
+    <th>Cast</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Complexion</th>
+    <th>Profession</th>
     </tr>
     <tr>
-    <td>{{ location.address }}</td>
-    <td>{{ location.state }}</td>
-    <td>{{ location.city }}</td>
+    <td>{{ victim.name }}</td>
+    <td>{{ victim.cast }}</td>
+    <td>{{ victim.age }}</td>
+    <td>{{ victim.gender }}</td>
+    <td>{{ victim.complexion }}</td>
+    <td>{{ victim.profession }}</td>
     </tr>
 </table>
 
