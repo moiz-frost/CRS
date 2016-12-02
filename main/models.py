@@ -1,4 +1,3 @@
-from datetime import datetime
 from django.core.validators import RegexValidator
 from django.db import models
 
@@ -72,8 +71,6 @@ PENALTIES_CHOICES = [
 class Location(models.Model):
     location_id = models.BigAutoField(primary_key=True)
     address = models.TextField(max_length=200, blank=True)
-    zip_code = models.CharField(max_length=5,
-                                validators=[RegexValidator(r'^\d{5}$', message="Invalid zip code")])
     state = models.CharField(max_length=20)
     city = models.CharField(max_length=20)
 
@@ -81,30 +78,30 @@ class Location(models.Model):
         return str(self.location_id)
 
 
-class Person(models.Model):
-    nic = models.CharField(primary_key=True, max_length=13,
-                           validators=[RegexValidator(r'^\d{13}$', message="Must be 13 digits")])
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    date_of_birth = models.DateField()
-    phone = models.CharField(max_length=17,
-                             validators=[RegexValidator(r'^\d{11,14}$', message="Invalid Phone Number")])
-    profession = models.CharField(max_length=50)
-    gender = models.CharField(max_length=20)
-    location = models.OneToOneField(Location, null=False, blank=False)
+# class Person(models.Model):
+#     nic = models.CharField(primary_key=True, max_length=13,
+#                            validators=[RegexValidator(r'^\d{13}$', message="Must be 13 digits")])
+#     first_name = models.CharField(max_length=100)
+#     last_name = models.CharField(max_length=100)
+#     date_of_birth = models.DateField()
+#     phone = models.CharField(max_length=17,
+#                              validators=[RegexValidator(r'^\d{11,14}$', message="Invalid Phone Number")])
+#     profession = models.CharField(max_length=50)
+#     gender = models.CharField(max_length=20)
+#     location = models.OneToOneField(Location, null=False, blank=False)
+#
+#     def __str__(self):
+#         return str(self.nic)
 
-    def __str__(self):
-        return str(self.nic)
 
-
-class User(models.Model):
-    user_name = models.CharField(max_length=200, primary_key=True, unique=True)
-    password = models.CharField(max_length=200)
-    person = models.OneToOneField(Person, on_delete=models.CASCADE, blank=False, null=False, default=None)
-    created = models.DateTimeField(default=datetime.now, blank=True)
-
-    def __str__(self):
-        return str(self.user_name)
+# class User(models.Model):
+#     user_name = models.CharField(max_length=200, primary_key=True, unique=True)
+#     password = models.CharField(max_length=200)
+#     person = models.OneToOneField(Person, on_delete=models.CASCADE, blank=False, null=False, default=None)
+#     created = models.DateTimeField(default=datetime.now, blank=True)
+#
+#     def __str__(self):
+#         return str(self.user_name)
 
 
 class Victim(models.Model):
@@ -155,7 +152,7 @@ class Crime(models.Model):
 
 class CrimesCommitted(models.Model):
     id = models.BigAutoField(primary_key=True)
-    #user = models.ForeignKey(User, blank=False, null=False) # Restore this later when you work on authentication
+    location = models.ForeignKey(Location, blank=False, null=False)
     victim = models.ForeignKey(Victim, blank=False, null=False)
     crime = models.ForeignKey(Crime, blank=False, null=False)
     suspect = models.ForeignKey(Suspect, blank=False, null=False)

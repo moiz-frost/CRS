@@ -24,6 +24,7 @@
     <caption>Crimes</caption>
     <tr>
     <th>ID</th>
+    <th>Location</th>
     <th>Victim</th>
     <th>Suspect</th>
     <th>Crime</th>
@@ -32,6 +33,7 @@
 {% for crime in crimes %}
     <tr>
     <td>{{ crime.id }}</td>
+    <td>{{ crime.location.address }}</td>
     <td>{{ crime.victim.name }}</td>
     <td>{{ crime.suspect.gender }}</td>
     <td>{{ crime.crime.category.name }}</td>

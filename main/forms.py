@@ -1,6 +1,6 @@
 import re
 from django import forms
-from .models import Location, Crime, CrimeCategory, Person, Victim, Suspect, CrimesCommitted, STATE_CHOICES, GENDER_CHOICES, \
+from .models import Location, Crime, CrimeCategory, Victim, Suspect, CrimesCommitted, STATE_CHOICES, GENDER_CHOICES, \
     CRIME_CATEGORIES_CHOICES, THREAT_LEVELS_CHOICES, PENALTIES_CHOICES, CAST_CHOICES, COMPLEXION_CHOICES, \
     PROFESSION_CHOICES, PHYSIQUE_CHOICES
 
@@ -115,7 +115,6 @@ class LocationForm(forms.ModelForm):
         model = Location
         fields = ['location_id',
                   'address',
-                  'zip_code',
                   'state',
                   'city'
                   ]
@@ -129,8 +128,7 @@ class LocationForm(forms.ModelForm):
             ),
             'state': forms.Select(
                 choices=STATE_CHOICES
-            ),
-            'zip_code': None
+            )
         }
         labels = {
             'address': 'Address'
@@ -141,30 +139,30 @@ class LocationForm(forms.ModelForm):
         self.fields["address"].initial = ""
 
 
-class PersonForm(forms.ModelForm):
-    class Meta:
-        model = Person
-        fields = ['nic',
-                  'first_name',
-                  'last_name',
-                  'date_of_birth',
-                  'phone',
-                  'profession',
-                  'gender']
-
-        labels = {
-            'nic': 'NIC'
-        }
-
-        widgets = {
-            'date_of_birth': DateInput(),
-            'gender': forms.Select(
-                choices=GENDER_CHOICES
-            )
-        }
-
-        # def clean_nic(self, *args, **kwargs):
-        #     nic = self.cleaned_data.get("nic")
-        #     if len(nic) != 13:
-        #         raise forms.ValidationError("NIC must be of 13 digits")
-        #     return nic
+# class PersonForm(forms.ModelForm):
+#     class Meta:
+#         model = Person
+#         fields = ['nic',
+#                   'first_name',
+#                   'last_name',
+#                   'date_of_birth',
+#                   'phone',
+#                   'profession',
+#                   'gender']
+#
+#         labels = {
+#             'nic': 'NIC'
+#         }
+#
+#         widgets = {
+#             'date_of_birth': DateInput(),
+#             'gender': forms.Select(
+#                 choices=GENDER_CHOICES
+#             )
+#         }
+#
+#         # def clean_nic(self, *args, **kwargs):
+#         #     nic = self.cleaned_data.get("nic")
+#         #     if len(nic) != 13:
+#         #         raise forms.ValidationError("NIC must be of 13 digits")
+#         #     return nic
