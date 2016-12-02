@@ -156,6 +156,7 @@ class CrimesCommitted(models.Model):
     victim = models.ForeignKey(Victim, blank=False, null=False)
     crime = models.ForeignKey(Crime, blank=False, null=False)
     suspect = models.ForeignKey(Suspect, blank=False, null=False)
+    date = models.DateField()
 
     def __str__(self):
         return str(self.id)

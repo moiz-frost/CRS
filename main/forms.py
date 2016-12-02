@@ -82,7 +82,11 @@ class VictimForm(forms.ModelForm):
 class CrimesCommittedForm(forms.ModelForm):
     class Meta:
         model = CrimesCommitted
-        fields = ['id']
+        fields = ['id',
+                  'date']
+        widgets = {
+            'date': DateInput()
+        }
 
 
 class SuspectForm(forms.ModelForm):

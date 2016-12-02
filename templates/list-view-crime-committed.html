@@ -28,6 +28,7 @@
     <th>Victim</th>
     <th>Suspect</th>
     <th>Crime</th>
+    <th>Date</th>
     </tr>
 
 {% for crime in crimes %}
@@ -37,6 +38,7 @@
     <td>{{ crime.victim.name }}</td>
     <td>{{ crime.suspect.gender }}</td>
     <td>{{ crime.crime.category.name }}</td>
+    <td>{{ crime.date }}</td>
     </tr>
 {% endfor %}
 
