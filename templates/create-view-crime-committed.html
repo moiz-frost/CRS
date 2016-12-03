@@ -3,31 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>Crime</title>
+    <style>
+        div.fieldWrapper {
+            display: block;
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        }
+    </style>
 </head>
 <body>
 
-
 <form method="POST" action="">{% csrf_token %}
-    {{ crime_form.as_p }}
-    </br>
+
+    {{ crime_form.non_field_errors }}
+    <div class="fieldWrapper">
+        {{ crime_form.details.errors }}
+        <label for="{{ crime_form.details.id_for_label }}">Details</label>
+        {{ crime_form.details }}
+    </div>
+
     <hr>
-    </br>
-    {{ crime_category_form.as_p }}
-    </br>
+
+    {{ crime_category_form.non_field_errors }}
+    <div class="fieldWrapper">
+        {{ crime_category_form.name.errors }}
+        <label for="{{ crime_category_form.name.id_for_label }}">Category</label>
+        {{ crime_category_form.name }}
+    </div>
+    <div class="fieldWrapper">
+        {{ crime_category_form.threat_level.errors }}
+        <label for="{{ crime_category_form.threat_level.id_for_label }}">Threat Level</label>
+        {{ crime_category_form.threat_level }}
+    </div>
+    <div class="fieldWrapper">
+        {{ crime_category_form.penalty.errors }}
+        <label for="{{ crime_category_form.penalty.id_for_label }}">Penalty</label>
+        {{ crime_category_form.penalty }}
+    </div>
+
     <hr>
-    </br>
-    {{ victim_form.as_p }}
-    </br>
+
+    {{ victim_form.non_field_errors }}
+    <div class="fieldWrapper">
+        {{ victim_form.name.errors }}
+        <label for="{{ victim_form.name.id_for_label }}">Name</label>
+        {{ victim_form.name }}
+    </div>
+    <div class="fieldWrapper">
+        {{ victim_form.cast.errors }}
+        <label for="{{ victim_form.cast.id_for_label }}">Name</label>
+        {{ victim_form.cast }}
+    </div>
+    <div class="fieldWrapper">
+        {{ victim_form.age.errors }}
+        <label for="{{ victim_form.age.id_for_label }}">Age</label>
+        {{ victim_form.age }}
+    </div>
+    <div class="fieldWrapper">
+        {{ victim_form.gender.errors }}
+        <label for="{{ victim_form.gender.id_for_label }}">Gender</label>
+        {{ victim_form.gender }}
+    </div>
+    <div class="fieldWrapper">
+        {{ victim_form.complexion.errors }}
+        <label for="{{ victim_form.complexion.id_for_label }}">Complexion</label>
+        {{ victim_form.complexion }}
+    </div>
+    <div class="fieldWrapper">
+        {{ victim_form.profession.errors }}
+        <label for="{{ victim_form.profession.id_for_label }}">Profession</label>
+        {{ victim_form.profession }}
+    </div>
+
+
     <hr>
-    </br>
+
     {{ suspect_form.as_p }}
-    </br>
+
     <hr>
-    </br>
+
     {{ crime_committed_form.as_p }}
-    </br>
+
     <hr>
-    </br>
+
     {{ location_form.as_p }}
     <input type="submit" value="Submit">
 </form>
