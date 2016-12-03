@@ -133,7 +133,7 @@ class Suspect(models.Model):
 
 class CrimeCategory(models.Model):
     category_id = models.BigAutoField(primary_key=True)
-    name = models.CharField(max_length=25)
+    category = models.CharField(max_length=25)
     threat_level = models.CharField(max_length=25)
     penalty = models.CharField(max_length=25)
 

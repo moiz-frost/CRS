@@ -30,12 +30,12 @@ class CrimeCategoryForm(forms.ModelForm):
     class Meta:
         model = CrimeCategory
         fields = ['category_id',
-                  'name',
+                  'category',
                   'threat_level',
                   'penalty'
                   ]
         widgets = {
-            'name': forms.Select(
+            'category': forms.Select(
                 choices=CRIME_CATEGORIES_CHOICES
             ),
             'threat_level': forms.Select(

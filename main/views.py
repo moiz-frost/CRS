@@ -28,7 +28,6 @@ def create_view_crime_committed(request):
         if category_valid and crime_valid and victim_valid and suspect_valid and location_valid:
             location = location_form.save()
             category = crime_category_form.save()
-            print(category.name)
             victim = victim_form.save()
             crime = crime_form.save(commit=False)
             crime.category = category

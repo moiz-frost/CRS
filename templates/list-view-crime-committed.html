@@ -37,7 +37,7 @@
     <td><a href='http://127.0.0.1:8000/main/location-detail/{{ crime.location.location_id }}'>{{ crime.location.address }}</a></td>
     <td><a href='http://127.0.0.1:8000/main/victim-detail/{{ crime.victim.victim_id }}'>{{ crime.victim.name }}</a></td>
     <td><a href='http://127.0.0.1:8000/main/suspect-detail/{{ crime.suspect.suspect_id }}'>{{ crime.suspect.gender }}</a></td>
-    <td><a href='http://127.0.0.1:8000/main/crime-detail/{{ crime.crime.crime_id }}'>{{ crime.crime.category.name }}</a></td>
+    <td><a href='http://127.0.0.1:8000/main/crime-detail/{{ crime.crime.crime_id }}'>{{ crime.crime.category.category }}</a></td>
     <td>{{ crime.date }}</td>
     </tr>
 {% endfor %}
