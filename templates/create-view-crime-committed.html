@@ -9,10 +9,25 @@
 
 <form method="POST" action="">{% csrf_token %}
     {{ crime_form.as_p }}
+    </br>
+    <hr>
+    </br>
     {{ crime_category_form.as_p }}
+    </br>
+    <hr>
+    </br>
     {{ victim_form.as_p }}
+    </br>
+    <hr>
+    </br>
     {{ suspect_form.as_p }}
+    </br>
+    <hr>
+    </br>
     {{ crime_committed_form.as_p }}
+    </br>
+    <hr>
+    </br>
     {{ location_form.as_p }}
     <input type="submit" value="Submit">
 </form>

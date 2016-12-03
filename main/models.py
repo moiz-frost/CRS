@@ -152,10 +152,10 @@ class Crime(models.Model):
 
 class CrimesCommitted(models.Model):
     id = models.BigAutoField(primary_key=True)
-    location = models.ForeignKey(Location, blank=False, null=False)
-    victim = models.ForeignKey(Victim, blank=False, null=False)
-    crime = models.ForeignKey(Crime, blank=False, null=False)
-    suspect = models.ForeignKey(Suspect, blank=False, null=False)
+    location = models.ForeignKey(Location, null=False)
+    victim = models.ForeignKey(Victim, null=False)
+    crime = models.ForeignKey(Crime, null=False)
+    suspect = models.ForeignKey(Suspect, null=False)
     date = models.DateField()
 
     def __str__(self):
