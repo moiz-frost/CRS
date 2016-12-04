@@ -25,10 +25,13 @@
     <tr>
     <th>Details</th>
     <th>Category</th>
+    <th>Edit</th>
     </tr>
     <tr>
     <td>{{ crime.details }}</td>
-    <td><a href='http://127.0.0.1:8000/main/crime-category-detail/{{ crime.category.category_id }}'>{{ crime.category.name }}</a></td>
+    <td>{{ crime.category.category }}</td>
+    <td><a href='http://127.0.0.1:8000/main/crime-list/details/{{ crime.crime_id }}/edit/'>Edit</a></td>
+
     </tr>
 </table>
 

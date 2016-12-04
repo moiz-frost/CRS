@@ -3,6 +3,7 @@ from .forms import LocationForm, CrimeCategoryForm, CrimeForm, VictimForm, Suspe
 from .models import Location, CrimesCommitted, Victim, Suspect, CrimeCategory, Crime
 
 
+# Create Views
 def create_view_crime_committed(request):
     template = "create-view-crime-committed.html"
     crime_form = CrimeForm(request.POST or None)
@@ -42,6 +43,7 @@ def create_view_crime_committed(request):
     return render(request, template, context)
 
 
+# List Views
 def list_view_location(request):
     template = "list-view-location.html"
     locations = Location.objects.all()
@@ -96,6 +98,7 @@ def list_view_crime(request):
     return render(request, template, context)
 
 
+# Detail Views
 def detail_view_location(request, id=None):
     template = "detail-view-location.html"
     location = get_object_or_404(Location, location_id=id)
@@ -138,4 +141,75 @@ def detail_view_crime_category(request, id=None):
     context = {
         "category": category
     }
+    return render(request, template, context)
+
+
+# Update Views
+def update_view_location(request, id=None):
+    template = "update-view-location.html"
+    obj = get_object_or_404(Location, location_id=id)
+    location_form = LocationForm(request.POST or None, instance=obj)
+    context = {
+        "location_form": location_form
+    }
+    if request.method == "POST" and location_form.is_valid():
+        obj = location_form.save(commit=False)
+        obj.save()
+        return HttpResponseRedirect("/main/location-list/details/{id}".format(id=id))
+    return render(request, template, context)
+
+
+def update_view_crime(request, id=None):
+    template = "update-view-crime.html"
+    obj = get_object_or_404(Crime, crime_id=id)
+    crime_form = CrimeForm(request.POST or None, instance=obj)
+    context = {
+        "crime_form": crime_form
+    }
+    if request.method == "POST" and crime_form.is_valid():
+        obj = crime_form.save(commit=False)
+        obj.save()
+        return HttpResponseRedirect("/main/crime-list/details/{id}".format(id=id))
+    return render(request, template, context)
+
+
+def update_view_crime_category(request, id=None):
+    template = "update-view-crime-category.html"
+    obj = get_object_or_404(CrimeCategory, category_id=id)
+    category_form = CrimeCategoryForm(request.POST or None, instance=obj)
+    context = {
+        "category_form": category_form
+    }
+    if request.method == "POST" and category_form.is_valid():
+        obj = category_form.save(commit=False)
+        obj.save()
+        return HttpResponseRedirect("/main/crime-category-list/details/{id}".format(id=id))
+    return render(request, template, context)
+
+
+def update_view_victim(request, id=None):
+    template = "update-view-victim.html"
+    obj = get_object_or_404(Victim, victim_id=id)
+    victim_form = VictimForm(request.POST or None, instance=obj)
+    context = {
+        "victim_form": victim_form
+    }
+    if request.method == "POST" and victim_form.is_valid():
+        obj = victim_form.save(commit=False)
+        obj.save()
+        return HttpResponseRedirect("/main/victim-list/details/{id}".format(id=id))
+    return render(request, template, context)
+
+
+def update_view_suspect(request, id=None):
+    template = "update-view-suspect.html"
+    obj = get_object_or_404(Suspect, suspect_id=id)
+    suspect_form = SuspectForm(request.POST or None, instance=obj)
+    context = {
+        "suspect_form": suspect_form
+    }
+    if request.method == "POST" and suspect_form.is_valid():
+        obj = suspect_form.save(commit=False)
+        obj.save()
+        return HttpResponseRedirect("/main/suspect-list/details/{id}".format(id=id))
     return render(request, template, context)

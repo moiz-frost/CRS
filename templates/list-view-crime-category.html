@@ -27,14 +27,16 @@
     <th>Name</th>
     <th>Threat Level</th>
     <th>Penalty</th>
+    <th>Details</th>
     </tr>
 
 {% for category in crime_categories %}
     <tr>
-    <td>{{ category.category_id}}</td>
+    <td>{{ category.category_id }}</td>
     <td>{{ category.category }}</td>
     <td>{{ category.threat_level }}</td>
     <td>{{ category.penalty }}</td>
+    <td><a href='http://127.0.0.1:8000/main/crime-category-list/details/{{ category.category_id }}'>Details</a></td>
     </tr>
 {% endfor %}
 

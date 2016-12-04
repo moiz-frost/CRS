@@ -26,11 +26,13 @@
     <th>Name</th>
     <th>Threat Level</th>
     <th>Penalty</th>
+    <th>Details</th>
     </tr>
     <tr>
-    <td>{{ category.name }}</td>
+    <td>{{ category.category }}</td>
     <td>{{ category.threat_level }}</td>
     <td>{{ category.penalty }}</td>
+    <td><a href='http://127.0.0.1:8000/main/crime-category-list/details/{{ category.category_id }}/edit/'>Edit</a></td>
     </tr>
 </table>
 

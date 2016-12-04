@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Location</title>
+</head>
+<body>
+
+<form method="POST" action="">{% csrf_token %}
+
+{{ location_form.as_p }}
+
+<input type="submit" value="Update">
+</form>
+
+</body>
+</html>

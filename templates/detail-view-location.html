@@ -26,11 +26,13 @@
     <th>Address</th>
     <th>State</th>
     <th>City</th>
+    <th>Edit</th>
     </tr>
     <tr>
     <td>{{ location.address }}</td>
     <td>{{ location.state }}</td>
     <td>{{ location.city }}</td>
+    <td><a href='http://127.0.0.1:8000/main/location-list/details/{{ location.location_id }}/edit'>Edit</a></td>
     </tr>
 </table>
 

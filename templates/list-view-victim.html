@@ -30,6 +30,7 @@
     <th>Gender</th>
     <th>Complexion</th>
     <th>Profession</th>
+    <th>Details</th>
     </tr>
 
 {% for victim in victims %}
@@ -41,6 +42,7 @@
     <td>{{ victim.gender }}</td>
     <td>{{ victim.complexion }}</td>
     <td>{{ victim.profession }}</td>
+    <td><a href='http://127.0.0.1:8000/main/victim-list/details/{{ victim.victim_id }}'>Details</a></td>
     </tr>
 {% endfor %}
 

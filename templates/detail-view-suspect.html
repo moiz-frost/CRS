@@ -28,6 +28,7 @@
     <th>Cast</th>
     <th>Age</th>
     <th>Gender</th>
+    <th>Details</th>
     </tr>
     <tr>
     <td>{{ suspect.physique }}</td>
@@ -35,6 +36,8 @@
     <td>{{ suspect.cast }}</td>
     <td>{{ suspect.age }}</td>
     <td>{{ suspect.gender }}</td>
+    <td><a href='http://127.0.0.1:8000/main/suspect-list/details/{{ suspect.suspect_id }}/edit/'>Edit</a></td>
+
     </tr>
 </table>
 

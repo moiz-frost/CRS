@@ -21,7 +21,7 @@
 </head>
 <body>
 <table style="width:100%">
-    <caption>Victim ID "{{ victim.victim_id}}" Details</caption>
+    <caption>Victim ID "{{ victim.victim_id }}" Details</caption>
     <tr>
     <th>Name</th>
     <th>Cast</th>
@@ -29,6 +29,7 @@
     <th>Gender</th>
     <th>Complexion</th>
     <th>Profession</th>
+    <th>Details</th>
     </tr>
     <tr>
     <td>{{ victim.name }}</td>
@@ -37,6 +38,8 @@
     <td>{{ victim.gender }}</td>
     <td>{{ victim.complexion }}</td>
     <td>{{ victim.profession }}</td>
+    <td><a href='http://127.0.0.1:8000/main/victim-list/details/{{ victim.victim_id }}/edit/'>Edit</a></td>
+
     </tr>
 </table>
 
