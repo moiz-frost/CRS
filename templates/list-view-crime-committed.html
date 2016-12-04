@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <title>Crime Details</title>
     <style>
-        body {background-color: powderblue;}
+        body {
+            font-family: 'Lato', sans-serif;
+            background: #e2dedb;
+            color: #b3aca7;
+        }
         tr   {text-align: center;}
         table, th, td {
             border: 1px solid black;
@@ -35,10 +39,10 @@
 {% for crime in crimes %}
     <tr>
     <td>{{ crime.id }}</td>
-    <td><a href='http://127.0.0.1:8000/main/location-detail/{{ crime.location.location_id }}'>{{ crime.location.address }}</a></td>
-    <td><a href='http://127.0.0.1:8000/main/victim-detail/{{ crime.victim.victim_id }}'>{{ crime.victim.name }}</a></td>
-    <td><a href='http://127.0.0.1:8000/main/suspect-detail/{{ crime.suspect.suspect_id }}'>{{ crime.suspect.gender }}</a></td>
-    <td><a href='http://127.0.0.1:8000/main/crime-detail/{{ crime.crime.crime_id }}'>{{ crime.crime.category.category }}</a></td>
+    <td><a href='http://127.0.0.1:8000/main/location-list/details/{{ crime.location.location_id }}/'>{{ crime.location.address }}</a></td>
+    <td><a href='http://127.0.0.1:8000/main/victim-list/details/{{ crime.victim.victim_id }}/'>{{ crime.victim.name }}</a></td>
+    <td><a href='http://127.0.0.1:8000/main/suspect-list/details/{{ crime.suspect.suspect_id }}/'>{{ crime.suspect.gender }}</a></td>
+    <td><a href='http://127.0.0.1:8000/main/crime-list/details/{{ crime.crime.crime_id }}/'>{{ crime.crime.category.category }}</a></td>
     <td>{{ crime.date }}</td>
     <td><a href='http://127.0.0.1:8000/main/crime-committed-list/{{ crime.id }}/delete/'>Delete</a></td>
     </tr>
