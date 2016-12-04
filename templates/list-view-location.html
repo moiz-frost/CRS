@@ -28,6 +28,7 @@
     <th>State</th>
     <th>City</th>
     <th>Details</th>
+    <th>Delete</th>
     </tr>
 
 {% for loc in locations %}
@@ -37,6 +38,7 @@
     <td>{{ loc.state }}</td>
     <td>{{ loc.city }}</td>
     <td><a href='http://127.0.0.1:8000/main/location-list/details/{{ loc.location_id }}'>Details</a></td>
+    <td><a href='http://127.0.0.1:8000/main/location-list/details/{{ loc.location_id }}/delete/'>Delete</a></td>
     </tr>
 {% endfor %}
 

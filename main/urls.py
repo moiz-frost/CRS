@@ -2,7 +2,8 @@ from django.conf.urls import url
 from .views import list_view_location, detail_view_location, \
     create_view_crime_committed, list_view_crime_committed, list_view_victim, list_view_suspect, list_view_crime, \
     list_view_crime_category, detail_view_victim, detail_view_suspect, detail_view_crime, detail_view_crime_category, \
-    update_view_location, update_view_crime, update_view_crime_category, update_view_suspect, update_view_victim
+    update_view_location, update_view_crime, update_view_crime_category, update_view_suspect, update_view_victim, \
+    delete_view_suspect, delete_view_crime, delete_view_crime_category, delete_view_crime_committed, delete_view_location, delete_view_victim
 
 urlpatterns = [
 
@@ -63,5 +64,26 @@ urlpatterns = [
         name='update-view-victim'),
     url(r'^suspect-list/details/(?P<id>\d+)/edit/$',
         update_view_suspect,
-        name='update-view-suspect')
+        name='update-view-suspect'),
+
+    # Delete Views
+    url(r'^suspect-list/details/(?P<id>\d+)/delete/$',
+        delete_view_suspect,
+        name=''),
+    url(r'^victim-list/details/(?P<id>\d+)/delete/$',
+        delete_view_victim,
+        name=''),
+    url(r'^crime-list/details/(?P<id>\d+)/delete/$',
+        delete_view_crime,
+        name=''),
+    url(r'^crime-category-list/details/(?P<id>\d+)/delete/$',
+        delete_view_crime_category,
+        name=''),
+    url(r'^location-list/details/(?P<id>\d+)/delete/$',
+        delete_view_location,
+        name=''),
+    url(r'^crime-committed-list/(?P<id>\d+)/delete/$',
+        delete_view_crime_committed,
+        name=''),
+
 ]

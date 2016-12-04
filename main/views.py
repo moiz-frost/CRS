@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
 from .forms import LocationForm, CrimeCategoryForm, CrimeForm, VictimForm, SuspectForm, CrimesCommittedForm
 from .models import Location, CrimesCommitted, Victim, Suspect, CrimeCategory, Crime
@@ -40,6 +41,7 @@ def create_view_crime_committed(request):
             crimes_committed.crime = crime
             crimes_committed.suspect = suspect
             crimes_committed.save()
+            return HttpResponseRedirect("/main/create-crime-committed/")
     return render(request, template, context)
 
 
@@ -213,3 +215,40 @@ def update_view_suspect(request, id=None):
         obj.save()
         return HttpResponseRedirect("/main/suspect-list/details/{id}".format(id=id))
     return render(request, template, context)
+
+
+# Delete Views
+def delete_view_suspect(request, id=None):
+    obj = get_object_or_404(Suspect, suspect_id=id)
+    obj.delete()
+    return HttpResponseRedirect("/main/suspect-list/")
+
+
+def delete_view_victim(request, id=None):
+    obj = get_object_or_404(Victim, victim_id=id)
+    obj.delete()
+    return HttpResponseRedirect("/main/victim-list/")
+
+
+def delete_view_crime(request, id=None):
+    obj = get_object_or_404(Crime, crime_id=id)
+    obj.delete()
+    return HttpResponseRedirect("/main/crime-list/")
+
+
+def delete_view_location(request, id=None):
+    obj = get_object_or_404(Location, location_id=id)
+    obj.delete()
+    return HttpResponseRedirect("/main/location-list/")
+
+
+def delete_view_crime_category(request, id=None):
+    obj = get_object_or_404(CrimeCategory, category_id=id)
+    obj.delete()
+    return HttpResponseRedirect("/main/crime-category-list/")
+
+
+def delete_view_crime_committed(request, id=None):
+    obj = get_object_or_404(CrimesCommitted, id=id)
+    obj.delete()
+    return HttpResponseRedirect("/main/crime-committed-list/")

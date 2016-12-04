@@ -30,6 +30,7 @@
     <th>Age</th>
     <th>Gender</th>
     <th>Details</th>
+    <th>Delete</th>
     </tr>
 
 {% for suspect in suspects %}
@@ -41,6 +42,7 @@
     <td>{{ suspect.age }}</td>
     <td>{{ suspect.gender }}</td>
     <td><a href='http://127.0.0.1:8000/main/suspect-list/details/{{ suspect.suspect_id }}'>Details</a></td>
+    <td><a href='http://127.0.0.1:8000/main/suspect-list/details/{{ suspect.suspect_id }}/delete/'>Delete</a></td>
 
     </tr>
 {% endfor %}

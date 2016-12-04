@@ -29,6 +29,7 @@
     <th>Suspect</th>
     <th>Category</th>
     <th>Date</th>
+    <th>Delete</th>
     </tr>
 
 {% for crime in crimes %}
@@ -39,6 +40,7 @@
     <td><a href='http://127.0.0.1:8000/main/suspect-detail/{{ crime.suspect.suspect_id }}'>{{ crime.suspect.gender }}</a></td>
     <td><a href='http://127.0.0.1:8000/main/crime-detail/{{ crime.crime.crime_id }}'>{{ crime.crime.category.category }}</a></td>
     <td>{{ crime.date }}</td>
+    <td><a href='http://127.0.0.1:8000/main/crime-committed-list/{{ crime.id }}/delete/'>Delete</a></td>
     </tr>
 {% endfor %}
 

@@ -31,6 +31,7 @@
     <th>Complexion</th>
     <th>Profession</th>
     <th>Details</th>
+    <th>Delete</th>
     </tr>
 
 {% for victim in victims %}
@@ -43,6 +44,7 @@
     <td>{{ victim.complexion }}</td>
     <td>{{ victim.profession }}</td>
     <td><a href='http://127.0.0.1:8000/main/victim-list/details/{{ victim.victim_id }}'>Details</a></td>
+    <td><a href='http://127.0.0.1:8000/main/victim-list/details/{{ victim.victim_id }}/delete/'>Delete</a></td>
     </tr>
 {% endfor %}
 
