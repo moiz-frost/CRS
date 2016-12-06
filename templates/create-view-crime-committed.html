@@ -12,11 +12,14 @@
             -webkit-margin-end: 0px;
         }
     </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<form method="POST" action="">{% csrf_token %}
+<form method="POST" action="" class="form-group col-md-4">{% csrf_token %}
 
+    <h1>Crime Details</h1>
     {{ crime_form.non_field_errors }}
     <div class="fieldWrapper">
         {{ crime_form.details.errors }}
@@ -26,6 +29,7 @@
 
     <hr>
 
+    <h1>Crime Category</h1>
     {{ crime_category_form.non_field_errors }}
     <div class="fieldWrapper">
         {{ crime_category_form.category.errors }}
@@ -45,15 +49,16 @@
 
     <hr>
 
+    <h1>Victim Details</h1>
     {{ victim_form.non_field_errors }}
     <div class="fieldWrapper">
         {{ victim_form.name.errors }}
-        <label for="{{ victim_form.name.id_for_label }}">Name</label>
+        <label for="{{ victim_form.name.id_for_label }}">Victim Name</label>
         {{ victim_form.name }}
     </div>
     <div class="fieldWrapper">
         {{ victim_form.cast.errors }}
-        <label for="{{ victim_form.cast.id_for_label }}">Name</label>
+        <label for="{{ victim_form.cast.id_for_label }}">Cast</label>
         {{ victim_form.cast }}
     </div>
     <div class="fieldWrapper">
@@ -80,14 +85,17 @@
 
     <hr>
 
+    <h1>Suspect Details</h1>
     {{ suspect_form.as_p }}
 
     <hr>
 
+    <h1>Date Committed</h1>
     {{ crime_committed_form.as_p }}
 
     <hr>
 
+    <h1>Location Details</h1>
     {{ location_form.as_p }}
     <input type="submit" value="Submit">
 </form>

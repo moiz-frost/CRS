@@ -2,7 +2,7 @@ import re
 from django import forms
 from .models import Location, Crime, CrimeCategory, Victim, Suspect, CrimesCommitted, STATE_CHOICES, GENDER_CHOICES, \
     CRIME_CATEGORIES_CHOICES, THREAT_LEVELS_CHOICES, PENALTIES_CHOICES, CAST_CHOICES, COMPLEXION_CHOICES, \
-    PROFESSION_CHOICES, PHYSIQUE_CHOICES
+    PROFESSION_CHOICES, PHYSIQUE_CHOICES, CITY_CHOICES
 
 
 class DateInput(forms.DateInput):
@@ -132,6 +132,9 @@ class LocationForm(forms.ModelForm):
             ),
             'state': forms.Select(
                 choices=STATE_CHOICES
+            ),
+            'city': forms.Select(
+                choices=CITY_CHOICES
             )
         }
         labels = {
