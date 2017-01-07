@@ -1,0 +1,511 @@
+PROFESSION_CHOICES
+------------------
+accountant
+actor
+air steward
+animator
+architect
+assistant
+author
+baker
+biologist
+builder
+butcher
+career counselor
+caretaker
+chef
+civil servant
+clerk
+comic book writer
+company director
+computer programmer
+cook
+decorator
+dentist
+designer
+diplomat
+director
+doctor
+economist
+editor
+electrician
+engineer
+executive
+farmer
+film director
+fisherman
+fishmonger
+flight attendant
+garbage man
+geologist
+hairdresser
+head teacher
+jeweler
+journalist
+judge
+juggler
+lawyer
+lecturer
+lexicographer
+library assistant
+magician
+makeup artist
+manager
+miner
+musician
+nurse
+optician
+painter
+personal assistant
+photographer
+pilot
+plumber
+police officer
+politician
+porter
+printer
+prison officer / warder
+professional gambler
+puppeteer
+receptionist
+sailor
+salesperson
+scientist
+secretary
+shop assistant
+sign language Interpreter
+singer
+soldier
+solicitor
+surgeon
+tailor
+teacher
+telephone operator
+telephonist
+translator
+travel agent
+trucker
+TV cameraman
+TV presenter
+vet
+waiter
+web designer
+writer
+
+----------------
+GENDER_CHOICES
+----------------
+male
+female
+other
+
+-------------
+CAST_CHOICES
+-------------
+Punjabi
+Pashtun
+Sindhi
+Seraiki
+Muhajir
+Baloch
+Others
+
+------------------
+COMPLEXION_CHOICES
+-------------------
+fair
+wheatish
+dark
+
+--------------
+STATE_CHOICES
+--------------
+Balochistan
+Khyber-Pakhtunkhwa
+Punjab
+Sindh
+Gilgit Baltistan
+Jammu and Kashmir
+Federally Administered Tribal Areas (FATA)
+
+-------------
+CITY_CHOICES
+-------------
+
+***********
+Balochistan
+************
+Quetta
+Khuzdar
+Turbat
+Chaman
+Hub
+Sibi
+Zhob
+Gwadar
+Dera Murad Jamali
+Dera Allah Yar
+Usta Mohammad
+Loralai
+Pasni
+Kharan
+Mastung
+Nushki
+Kalat
+
+*******************
+Khyber Pakhtunkhwa
+*******************
+Abbottabad
+Adezai
+Alpuri
+Akora Khattak
+Ayubia
+Banda Daud Shah
+Bannu
+Batkhela
+Battagram
+Birote
+Chakdara
+Charsadda
+Cherat
+Chitral
+Daggar
+Dargai
+Dera Ismail Khan
+Doaba
+Dir
+Drosh
+Hangu
+Haripur
+Karak
+Kohat
+Kulachi
+Lakki Marwat
+Latamber
+Madyan
+Mansehra
+Mardan
+Mastuj
+Mingora
+Naran
+Nowshera
+Paharpur
+Pabbi
+Peshawar
+Risalpur
+Saidu Sharif
+Shewa Adda
+Swabi
+Swat
+Tangi
+Tank
+Thall
+Timergara
+Tordher
+
+*******
+Punjab 
+*******
+Ahmadpur East
+Ahmed Nager Chatha
+Ali Khan Abad
+Alipur
+Arifwala
+Attock
+Bhera
+Bhalwal
+Bahawalnagar
+Bahawalpur
+Bhakkar
+Burewala
+Chillianwala
+Chakwal
+Chak Jhumra
+Chichawatni
+Chiniot
+Chishtian
+Chunian
+Dajkot
+Daska
+Davispur
+Darya Khan
+Dera Ghazi Khan
+Dhaular
+Dina
+Dinga
+Dipalpur
+Faisalabad
+Fateh Jang
+Ghakhar Mandi
+Gojra
+Gujranwala
+Gujrat
+Gujar Khan
+Harappa
+Hafizabad
+Haroonabad
+Hasilpur
+Haveli Lakha
+Jalalpur Jattan
+Jampur
+Jaranwala
+Jhang
+Jhelum
+Kalabagh
+Karor Lal Esan
+Kasur
+Kamalia
+Kamoke
+Khanewal
+Khanpur
+Khanqah Sharif
+Kharian
+Khushab
+Kot Adu
+Jauharabad
+Lahore
+Islamabad
+Lalamusa
+Layyah
+Liaquat Pur
+Lodhran
+Malakwal
+Mamoori
+Mailsi
+Mandi Bahauddin
+Mian Channu
+Mianwali
+Miani
+Multan
+Murree
+Muridke
+Mianwali Bangla
+Muzaffargarh
+Narowal
+Nankana Sahib
+Okara
+Renala Khurd
+Pakpattan
+Pattoki
+Pindi Bhattian
+Pind Dadan Khan
+Pir Mahal
+Qaimpur
+Qila Didar Singh
+Rabwah
+Raiwind
+Rajanpur
+Rahim Yar Khan
+Rawalpindi
+Sadiqabad
+Safdarabad
+Sahiwal
+Sambrial
+Samundri
+Sangla Hill
+Sarai Alamgir
+Sargodha
+Shakargarh
+Sheikhupura
+Shujaabad
+Sialkot
+Sohawa
+Soianwala
+Siranwali
+Tandlianwala
+Talagang
+Taxila
+Toba Tek Singh
+Vehari
+Wah Cantonment
+Wazirabad
+Yazman
+Zafarwal
+
+******
+Sindh
+******
+Badin
+Bhirkan
+Bhiria City
+Bhiria Road
+Rajo Khanani
+Chak
+Dadu
+Digri
+Diplo
+Dokri
+Ghotki
+Haala
+Hyderabad
+Islamkot
+Jacobabad
+Jamshoro
+Jungshahi
+Kandhkot
+Kandiaro
+Karachi
+Kashmore
+Keti Bandar
+Khadro
+Khairpur
+Khipro
+Kotri
+Larkana
+Matiari
+Mehar
+Mirpur Khas
+Mithani
+Mithi
+Mehrabpur
+Moro
+Nagarparkar
+Naudero
+Naushahro Feroze
+Naushara
+Nawabshah
+Qambar
+Qasimabad
+Ranipur
+Ratodero
+Rohri
+Sakrand
+Sanghar
+Shahbandar
+Shahdadkot
+Shahdadpur
+Shahpur Chakar
+Shikarpaur
+Sinjhoro
+Sukkur
+Tangwani
+Tando Adam Khan
+Tando Allahyar
+Tando Muhammad Khan
+Thatta
+Thari Mirwah
+Umerkot
+Warah
+Piryaloi
+Tharushah
+Sita Road
+Pir jo goth
+Shahpur jahania
+Qubo Saeed Khan
+Mehrabpur
+Samaro
+Maqsoodo Rind
+Sann
+Manjhand
+Lakhi ghulam shah
+Mian Sahib
+Jam Noorullah
+
+*****************
+Gilgit Baltistan
+*****************
+Gilgit
+Skardu
+Ghangche
+Shigar
+Makhan pura
+Asqurdas
+Sumo
+Nagar
+Gupi
+Gultari
+
+******************
+Jammu and Kashmir
+******************
+Muzaffarabad
+Mirpur
+Bhimber
+Kotli
+Rawlakot
+Bagh
+Jatlan
+
+************************************
+Federally Administered Tribal Areas (FATA)
+************************************
+Alizai
+Bara
+Darra Adam Khel
+Ghulam Khana mehrabpur
+Jamrud
+Khaar
+Landi Kotal
+Laskathan
+Makeen
+Mir Ali
+Miranshah
+Parachinar
+Razmak
+Sadda
+Wana
+
+-----------------
+PHYSIQUE_CHOICES
+-----------------
+Ectomorph
+Mesomorph
+Endomorph
+
+-----------------
+CRIME_CATEGORIES
+-----------------
+
+****************
+Personal Crimes
+****************
+Assault
+Battery
+False Imprisonment
+Kidnapping
+Homicide
+murdermanslaughter
+vehicular homicide
+Rape
+statutory rape
+sexual assault
+
+****************
+Property Crimes
+****************
+Larceny
+Robbery 
+Burglary 
+Arson
+Embezzlement
+Forgery
+False pretenses
+Receipt of stolen goods
+
+****************
+Inchoate Crimes 
+****************
+Attempt 
+Solicitation
+Conspiracy
+
+*****************
+Statutory Crimes 
+*****************
+Alcohol-related crimes
+Selling alcohol to a minor
+
+--------------
+THREAT_LEVELS
+--------------
+Infractions
+Misdemeanors
+Felonies
+Wobblers
+
+----------
+PENALTIES
+----------
+https://www.cga.ct.gov/2006/rpt/2006-r-0749.htm
+http://criminal.findlaw.com/criminal-charges/view-all-criminal-charges.html
